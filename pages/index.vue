@@ -23,6 +23,7 @@
         >
           GitHub
         </a>
+        <CodeSnippet />
       </div>
     </div>
   </div>
@@ -30,10 +31,12 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+import CodeSnippet from '~/components/CodeSnippet.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    CodeSnippet
   }
 }
 </script>
