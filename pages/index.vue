@@ -1,12 +1,11 @@
 <template>
   <div class="container">
     <div>
-      <logo />
       <h1 class="title">
-        portfolio-2020
+        Front End Challenges
       </h1>
       <h2 class="subtitle">
-        My perfect Nuxt.js project
+        Improve your skillz
       </h2>
       <div class="links">
         <a
@@ -49,6 +48,7 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: #556271;
 }
 
 .title {
@@ -57,14 +57,14 @@ export default {
   display: block;
   font-weight: 300;
   font-size: 100px;
-  color: #35495e;
+  color: white;
   letter-spacing: 1px;
 }
 
 .subtitle {
   font-weight: 300;
   font-size: 42px;
-  color: #526488;
+  color: white;
   word-spacing: 5px;
   padding-bottom: 15px;
 }
