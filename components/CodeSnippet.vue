@@ -50,10 +50,23 @@ export default {
 .code-snippet {
     color: white;
     background-color: #212A2E;
+    border-radius: 1rem;
 
     &__list {
         padding-left: 0px;
         margin: 0;
+    }
+
+    &__list > li:first-child {
+        .code-snippet__line-number {
+            border-top-left-radius: 1rem;
+        }
+    }
+
+    &__list > li:last-child {
+        .code-snippet__line-number {
+            border-bottom-left-radius: 1rem;
+        }
     }
 
     &__line-number {
