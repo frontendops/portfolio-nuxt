@@ -1,33 +1,18 @@
 <template>
-     <div class="container">
-    <div>
-      <h1 class="title">
-        Front End Challenges
-      </h1>
-      <h2 class="subtitle">
-        Improve your skillz
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+    <div class="container">
+    <div class="challenge-data">
+        <img src="" alt="">
+        <div class="actions">
+            <button>Download Files</button>
+            <button>Tutorial</button>
+        </div>
+    </div>
+    <div class="challenge-info">
         <CodeSnippet
             :challengeName="challengeName"
             :difficulty="difficulty"
             :concepts="concepts"
         />
-      </div>
     </div>
   </div>
 </template>
@@ -55,13 +40,13 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  margin: 0 auto;
+  margin: 8rem auto;
   min-height: 100vh;
+  max-width: 1200px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  align-items: flex-start;
   text-align: center;
-  background-color: #556271;
 }
 
 .title {
@@ -80,6 +65,14 @@ export default {
   color: white;
   word-spacing: 5px;
   padding-bottom: 15px;
+}
+
+.challenge-info {
+    width: 50%;
+}
+
+.challenge-data {
+    width: 40%;
 }
 
 .links {
