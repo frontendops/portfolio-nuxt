@@ -22,7 +22,11 @@
         >
           GitHub
         </a>
-        <CodeSnippet />
+        <CodeSnippet
+            :challengeName="challengeName"
+            :difficulty="difficulty"
+            :concepts="concepts"
+        />
       </div>
     </div>
   </div>
@@ -35,6 +39,16 @@ export default {
     name: 'ChallengePage',
     components: {
         CodeSnippet
+    },
+    data () {
+        return {
+            challengeName: ' TabsChallenge',
+            difficulty: 'junior',
+            concepts: [
+                'event listeners',
+                'event bubbling'
+            ]
+        }
     }
 }
 </script>

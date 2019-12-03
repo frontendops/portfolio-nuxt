@@ -31,17 +31,11 @@
 <script>
 export default {
     name: 'CodeSnippet',
-    data () {
-        return {
-            challengeName: ' TabsChallenge',
-            difficulty: 'junior',
-            concepts: [
-                'event listeners',
-                'event bubbling'
-            ]
-        }
-    },
-
+    props: {
+        difficulty: String,
+        concepts: Array,
+        challengeName: String
+    }
 }
 </script>
 
