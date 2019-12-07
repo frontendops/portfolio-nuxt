@@ -1,26 +1,28 @@
 <template>
   <div class="container">
-    <div class="challenge-data">
-      <img class="challenge-image" src="~/assets/design.png" alt="design" />
-      <div class="actions">
-        <button class="btn">Download Files</button>
-        <button class="btn btn-secondary">Tutorial</button>
+    <div class="challenge-container">
+      <div class="challenge-data">
+        <img class="challenge-image" src="~/assets/design.png" alt="design" />
+        <div class="actions">
+          <button class="btn">Download Files</button>
+          <button class="btn btn-secondary">Tutorial</button>
+        </div>
       </div>
-    </div>
-    <div class="challenge-info">
-      <CodeSnippet
-        :challengeName="challengeName"
-        :difficulty="difficulty"
-        :concepts="concepts"
-      />
-      <p class="challenge-description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, ab
-        optio tempore dignissimos minus voluptatem vel harum temporibus saepe
-        mollitia voluptatibus aut fugit aliquam itaque, labore eaque soluta.
-        Quos molestias odit magnam sit, minima consequatur provident voluptates,
-        fugit modi a fugiat culpa corrupti nostrum dolor saepe recusandae
-        dolores iste debitis?
-      </p>
+      <div class="challenge-info">
+        <CodeSnippet
+          :challengeName="challengeName"
+          :difficulty="difficulty"
+          :concepts="concepts"
+        />
+        <p class="challenge-description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, ab
+          optio tempore dignissimos minus voluptatem vel harum temporibus saepe
+          mollitia voluptatibus aut fugit aliquam itaque, labore eaque soluta.
+          Quos molestias odit magnam sit, minima consequatur provident
+          voluptates, fugit modi a fugiat culpa corrupti nostrum dolor saepe
+          recusandae dolores iste debitis?
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -46,13 +48,18 @@ export default {
 <style lang="scss" scoped>
 .container {
   // add mobile stle with breakpoint
-  margin: 8rem auto;
+  margin: 0 auto;
   min-height: 100vh;
   max-width: 1200px;
   display: flex;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: center;
   text-align: center;
+}
+
+.challenge-container {
+  display: flex;
+  justify-content: space-around;
 }
 
 .actions {
