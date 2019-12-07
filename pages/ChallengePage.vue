@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="challenge-data">
-      <img src alt />
+      <img class="challenge-image" src="~/assets/design.png" alt="design" />
       <div class="actions">
         <button class="btn">Download Files</button>
         <button class="btn btn-secondary">Tutorial</button>
@@ -54,6 +54,11 @@ export default {
   text-align: center;
 }
 
+.actions {
+  margin-top: 2.5rem;
+  text-align: left;
+}
+
 .title {
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -81,10 +86,15 @@ export default {
 }
 
 .challenge-description {
-  margin: 2.5rem;
+  margin-top: 2.5rem;
   text-align: left;
   line-height: 2;
   color: white;
+}
+
+.challenge-image {
+  height: 300px;
+  max-width: 100%;
 }
 
 .links {

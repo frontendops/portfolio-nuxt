@@ -25,6 +25,7 @@ body {
   font-size: 1rem;
   border-radius: 10px;
   border: 1px solid whitesmoke;
+  cursor: pointer;
 }
 
 .btn-secondary {
