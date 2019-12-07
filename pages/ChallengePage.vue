@@ -45,6 +45,7 @@ export default {
 
 <style lang="scss" scoped>
 .container {
+  // add mobile stle with breakpoint
   margin: 8rem auto;
   min-height: 100vh;
   max-width: 1200px;
