@@ -1,41 +1,46 @@
 <template>
-    <div class="container">
+  <div class="container">
     <div class="challenge-data">
-        <img src="" alt="">
-        <div class="actions">
-            <button>Download Files</button>
-            <button>Tutorial</button>
-        </div>
+      <img src alt />
+      <div class="actions">
+        <button class="btn">Download Files</button>
+        <button class="btn btn-secondary">Tutorial</button>
+      </div>
     </div>
     <div class="challenge-info">
-        <CodeSnippet
-            :challengeName="challengeName"
-            :difficulty="difficulty"
-            :concepts="concepts"
-        />
+      <CodeSnippet
+        :challengeName="challengeName"
+        :difficulty="difficulty"
+        :concepts="concepts"
+      />
+      <p class="challenge-description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, ab
+        optio tempore dignissimos minus voluptatem vel harum temporibus saepe
+        mollitia voluptatibus aut fugit aliquam itaque, labore eaque soluta.
+        Quos molestias odit magnam sit, minima consequatur provident voluptates,
+        fugit modi a fugiat culpa corrupti nostrum dolor saepe recusandae
+        dolores iste debitis?
+      </p>
     </div>
   </div>
 </template>
 
 <script>
-import CodeSnippet from '~/components/CodeSnippet.vue'
+import CodeSnippet from "~/components/CodeSnippet.vue";
 
 export default {
-    name: 'ChallengePage',
-    components: {
-        CodeSnippet
-    },
-    data () {
-        return {
-            challengeName: ' TabsChallenge',
-            difficulty: 'junior',
-            concepts: [
-                'event listeners',
-                'event bubbling'
-            ]
-        }
-    }
-}
+  name: "ChallengePage",
+  components: {
+    CodeSnippet
+  },
+  data() {
+    return {
+      challengeName: " TabsChallenge",
+      difficulty: "junior",
+      concepts: ["event listeners", "event bubbling"]
+    };
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -50,8 +55,8 @@ export default {
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
@@ -68,11 +73,18 @@ export default {
 }
 
 .challenge-info {
-    width: 50%;
+  width: 50%;
 }
 
 .challenge-data {
-    width: 40%;
+  width: 40%;
+}
+
+.challenge-description {
+  margin: 2.5rem;
+  text-align: left;
+  line-height: 2;
+  color: white;
 }
 
 .links {
