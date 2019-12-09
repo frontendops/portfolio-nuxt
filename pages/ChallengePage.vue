@@ -2,26 +2,34 @@
   <div class="container">
     <div class="challenge-container">
       <div class="challenge-data">
-        <img class="challenge-image" src="~/assets/design.png" alt="design" />
-        <div class="actions">
-          <button class="btn">Download Files</button>
-          <button class="btn btn-secondary">Tutorial</button>
-        </div>
+        <transition name="slideout">
+          <div v-if="shown">
+            <img class="challenge-image" src="~/assets/design.png" alt="design" />
+            <div class="actions">
+              <button class="btn">Download Files</button>
+              <button class="btn btn-secondary">Tutorial</button>
+            </div>
+          </div>
+        </transition>
       </div>
       <div class="challenge-info">
-        <CodeSnippet
-          :challengeName="challengeName"
-          :difficulty="difficulty"
-          :concepts="concepts"
-        />
-        <p class="challenge-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, ab
-          optio tempore dignissimos minus voluptatem vel harum temporibus saepe
-          mollitia voluptatibus aut fugit aliquam itaque, labore eaque soluta.
-          Quos molestias odit magnam sit, minima consequatur provident
-          voluptates, fugit modi a fugiat culpa corrupti nostrum dolor saepe
-          recusandae dolores iste debitis?
-        </p>
+        <transition name="slideout-right">
+          <div v-if="secondShown">
+            <CodeSnippet
+              :challengeName="challengeName"
+              :difficulty="difficulty"
+              :concepts="concepts"
+            />
+            <p class="challenge-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, ab
+              optio tempore dignissimos minus voluptatem vel harum temporibus saepe
+              mollitia voluptatibus aut fugit aliquam itaque, labore eaque soluta.
+              Quos molestias odit magnam sit, minima consequatur provident
+              voluptates, fugit modi a fugiat culpa corrupti nostrum dolor saepe
+              recusandae dolores iste debitis?
+            </p>
+          </div>
+        </transition>
       </div>
     </div>
   </div>
@@ -39,8 +47,16 @@ export default {
     return {
       challengeName: " TabsChallenge",
       difficulty: "junior",
-      concepts: ["event listeners", "event bubbling"]
+      concepts: ["event listeners", "event bubbling"],
+      shown: false,
+      secondShown: false
     };
+  },
+  mounted() {
+    this.secondShown = true;
+    setTimeout(() => {
+      this.shown = true;
+    }, 500);
   }
 };
 </script>
@@ -108,4 +124,27 @@ export default {
 .links {
   padding-top: 15px;
 }
+
+.slideout-enter {
+  transform: translateX(-600px);
+  opacity: 0;
+}
+
+.slideout-right-enter {
+  transform: translateX(600px);
+  opacity: 0;
+}
+
+.slideout-enter-active,
+.slideout-right-enter-active {
+  transition: transform 0.6s, opacity 0.8s;
+}
+// .slide-left-children-enter, .slide-left-children-leave-to {
+//   transform: translateX(-250px);
+//   opacity: 0;
+// }
+
+// .slide-left-children-enter-active, .slide-left-children-leave-active {
+//   transition: transform 0.6s, opacity 1s;
+// }
 </style>
