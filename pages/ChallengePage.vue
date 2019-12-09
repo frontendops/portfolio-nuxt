@@ -63,19 +63,24 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  // add mobile stle with breakpoint
   margin: 0 auto;
   min-height: 100vh;
   max-width: 1200px;
   display: flex;
   justify-content: space-around;
-  align-items: center;
   text-align: center;
+
+  @media (min-width: 453px) {
+    align-items: center;
+  }
 }
 
 .challenge-container {
-  display: flex;
-  justify-content: space-around;
+  width: 100%;
+  @media (min-width: 453px) {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 .actions {
@@ -102,11 +107,16 @@ export default {
 }
 
 .challenge-info {
-  width: 50%;
+  @media (min-width: 453px) {
+    width: 50%;
+  }
 }
 
 .challenge-data {
-  width: 40%;
+  margin-bottom: 2rem;
+  @media (min-width: 453px) {
+    width: 40%;
+  }
 }
 
 .challenge-description {
